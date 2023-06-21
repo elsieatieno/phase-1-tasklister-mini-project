@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function activeTodo(todo){
-  let p = document.createElement("p")
+  let li = document.createElement("li")
   let btn = document.createElement("button")
-  p.textContent = todo
-  btn.textContent = "x"
   btn.addEventListener("click", deleteTodo)
-  p.appendChild(btn)
-  document.querySelector("#tasks").appendChild(p)
+  li.textContent = todo
+  btn.textContent = "x"
+  li.appendChild(btn)
+  document.querySelector("#list").appendChild(li)
 }
 function deleteTodo(e){
   e.target.parentNode.remove()
